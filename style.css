@@ -1,18 +1,58 @@
-.cell-holder {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     display: flex;
-    gap: 10px;
     justify-content: center;
-    background-color: antiquewhite;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
 }
 
 .cell {
-    background-color: black;
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 20px;
+    align-items: center;
+    font-size: 2rem;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+.status {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background-color: #ddd;
 }
